@@ -1,10 +1,4 @@
-/* =========================================
-   THE BOOK NOOK
-   Main stylesheet
-   ========================================= */
-
-
-/* ---------- 1. Colors & basic settings ---------- */
+/*1. Colors & basic settings  */
 
 :root {
     --cream: #f7f0e4;
@@ -19,7 +13,7 @@
 }
 
 
-/* ---------- 2. General page styling ---------- */
+/*2. General page styling */
 
 * {
     box-sizing: border-box;
@@ -52,7 +46,7 @@ textarea {
 }
 
 
-/* ---------- 3. Header / Navigation ---------- */
+/* 3. Header / Navigation */
 
 .site-header {
     padding: 20px 0;
@@ -137,7 +131,7 @@ textarea {
 }
 
 
-/* ---------- 4. Main content ---------- */
+/* 4. Main content  */
 
 .main-content {
     width: 100%;
@@ -148,7 +142,7 @@ textarea {
 }
 
 
-/* ---------- 5. Typography ---------- */
+/*5. Typography */
 
 h1,
 h2,
@@ -186,7 +180,7 @@ h3 {
 }
 
 
-/* ---------- 6. Home introduction ---------- */
+/*6. Home introduction */
 
 .home-intro {
     width: 100%;
@@ -215,7 +209,7 @@ h3 {
 }
 
 
-/* ---------- 7. Buttons ---------- */
+/*7. Buttons*/
 
 .primary-button,
 .secondary-button,
@@ -282,7 +276,7 @@ h3 {
 }
 
 
-/* ---------- 8. Shelf / section heading ---------- */
+/*8. Shelf / section heading */
 
 .posts-section,
 .shelf-section {
@@ -317,7 +311,7 @@ h3 {
 }
 
 
-/* ---------- 9. Post cards ---------- */
+/*9. Post cards */
 
 .post-grid {
     width: 100%;
@@ -414,7 +408,7 @@ h3 {
 }
 
 
-/* ---------- 10. Empty shelf ---------- */
+/*10. Empty shelf */
 
 .empty-shelf {
     width: 100%;
@@ -449,7 +443,7 @@ h3 {
 }
 
 
-/* ---------- 11. Writing page ---------- */
+/* 11. Writing page  */
 
 .writing-page {
     width: 100%;
@@ -473,7 +467,7 @@ h3 {
 }
 
 
-/* ---------- 12. Forms ---------- */
+/*12. Forms*/
 
 .post-form {
     padding: 40px;
@@ -547,7 +541,7 @@ h3 {
 }
 
 
-/* ---------- 13. Single post page ---------- */
+/* 13. Single post page */
 
 .single-post {
     width: 100%;
@@ -594,7 +588,7 @@ h3 {
 }
 
 
-/* ---------- 14. Search page ---------- */
+/* 14. Search page */
 
 .search-page {
     width: 100%;
@@ -622,7 +616,7 @@ h3 {
 }
 
 
-/* ---------- 15. Flash messages ---------- */
+/* 15. Flash messages */
 
 .flash-container {
     width: 100%;
@@ -650,7 +644,7 @@ h3 {
 }
 
 
-/* ---------- 16. Error page ---------- */
+/* 16. Error page */
 
 .error-page {
     width: 100%;
@@ -681,7 +675,7 @@ h3 {
 }
 
 
-/* ---------- 17. Footer ---------- */
+/* 17. Footer */
 
 .site-footer {
     margin-top: 60px;
@@ -702,7 +696,7 @@ h3 {
 }
 
 
-/* ---------- 18. Animations ---------- */
+/* 18. Animations */
 
 @keyframes heroAppear {
     from {
@@ -752,7 +746,7 @@ h3 {
 }
 
 
-/* ---------- 19. Tablet ---------- */
+/* 19. Tablet */
 
 @media (max-width: 900px) {
 
@@ -776,7 +770,7 @@ h3 {
 }
 
 
-/* ---------- 20. Mobile ---------- */
+/* 20. Mobile */
 
 @media (max-width: 700px) {
 
@@ -897,7 +891,7 @@ h3 {
 }
 
 
-/* ---------- 21. Very small phones ---------- */
+/* 21. Very small phones */
 
 @media (max-width: 420px) {
 
@@ -937,7 +931,7 @@ h3 {
 }
 
 
-/* ---------- 22. Accessibility ---------- */
+/* 22. Accessibility */
 
 @media (prefers-reduced-motion: reduce) {
 
