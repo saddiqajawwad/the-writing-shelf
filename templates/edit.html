@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="writing-page">
+
+    <div class="page-heading">
+        <p class="eyebrow">Turn the page</p>
+
+        <h1>Edit your story.</h1>
+
+        <p>
+            Some stories change as we think about them.
+            Make any changes you'd like before saving it again.
+        </p>
+    </div>
+
+
+    <form method="POST" class="post-form">
+
+        <div class="form-group">
+            <label for="title">Title</label>
+
+            <input
+                type="text"
+                id="title"
+                name="title"
+                value="{{ post['title'] }}"
+                required
+            >
+        </div>
+
+
+        <div class="form-group">
+            <label for="content">Your story</label>
+
+            <textarea
+                id="content"
+                name="content"
+                rows="12"
+                required
+            >{{ post['content'] }}</textarea>
+        </div>
+
+
+        <div class="form-actions">
+
+            <a
+                href="{{ url_for('view_post', post_id=post['id']) }}"
+                class="secondary-button"
+            >
+                Cancel
+            </a>
+
+            <button type="submit" class="primary-button">
+                Save changes
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+{% endblock %}

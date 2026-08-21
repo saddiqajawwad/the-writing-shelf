@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<article class="single-post">
+
+    <div class="single-post-header">
+
+        <p class="eyebrow">From the shelf</p>
+
+        <h1>{{ post['title'] }}</h1>
+
+        <p class="post-date">
+            Written on {{ post['created_at'][:10] }}
+        </p>
+
+    </div>
+
+
+    <div class="post-content">
+        {{ post['content'] }}
+    </div>
+
+
+    <div class="post-actions">
+
+        <a href="{{ url_for('home') }}" class="secondary-button">
+            ← Back to shelf
+        </a>
+
+        <a href="{{ url_for('edit_post', post_id=post['id']) }}"
+           class="secondary-button">
+            Edit
+        </a>
+
+        <form
+            action="{{ url_for('delete_post', post_id=post['id']) }}"
+            method="POST"
+            class="delete-form"
+        >
+            <button type="submit"
+                    class="delete-button"
+                    onclick="return confirm('Remove this page from the shelf?');">
+                Remove
+            </button>
+        </form>
+
+    </div>
+
+</article>
+
+{% endblock %}

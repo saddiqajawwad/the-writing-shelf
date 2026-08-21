@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="home-intro">
+    <p class="eyebrow">A quiet little archive</p>
+
+    <h1>Stories from ordinary days.</h1>
+
+    <p class="intro-text">
+        A place to leave behind the thoughts, moments,
+        and stories worth remembering.
+    </p>
+
+    <a href="{{ url_for('add_post') }}" class="primary-button">
+        Write a story
+    </a>
+</section>
+
+
+<section class="shelf-section">
+
+    <div class="section-heading">
+        <h2>From the shelf</h2>
+
+        {% if posts %}
+            <span>{{ posts|length }} stories</span>
+        {% endif %}
+    </div>
+
+
+    {% if posts %}
+
+        <div class="post-grid">
+
+            {% for post in posts %}
+
+                <article class="post-card">
+
+                    <div class="post-card-top">
+                        <span class="post-label">A little story</span>
+
+                        <span class="post-date">
+                            {{ post['created_at'][:10] }}
+                        </span>
+                    </div>
+
+                    <h3>{{ post['title'] }}</h3>
+
+                    <p>
+                        {{ post['content'][:180] }}
+                        {% if post['content']|length > 180 %}
+                            ...
+                        {% endif %}
+                    </p>
+
+                    <a
+                        href="{{ url_for('view_post', post_id=post['id']) }}"
+                        class="read-link"
+                    >
+                        Read the page →
+                    </a>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="empty-shelf">
+
+            <div class="empty-icon">✦</div>
+
+            <h3>The shelf is still empty.</h3>
+
+            <p>Maybe your first story belongs here.</p>
+
+            <a href="{{ url_for('add_post') }}" class="primary-button">
+                Write the first page
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
